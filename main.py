@@ -8,7 +8,7 @@ from flask import Flask, request, send_file, render_template
 LOGO_WIDTH_SCALE_FACTOR = 0.1
 
 app = Flask(__name__)
-logo = Image.open("images/logo.png", "r")
+logo = Image.open("static/images/logo.png", "r")
 logo_width, logo_height = logo.size
 
 

@@ -6,15 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Add AKMUZ logo to your images with ease.">
 
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
 
     <title>AKMUZIFY</title>
 </head>
 
 <body>
-    <form action="/api/create" method="POST" enctype="multipart/form-data">
-        <input type="file" name="image">
-        <input type="submit" value="Submit">
-    </form>
+    <style>
+        body {
+            background-color: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 45px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        #logo {
+            width: 30%;
+        }
+
+        h4, p {
+            color: #444;
+            font-weight: normal;
+        }
+
+        a {
+            color: #c82f3f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .footer {
+            position: absolute;
+            text-align: center;
+            left: 0; 
+            right: 0; 
+            bottom: 10px;
+        }
+
+        .footer p {
+            color: #cccccc;
+        }
+    
+        .footer a {
+            color: #f0c1c6;
+        }
+
+        @media only screen and (min-width: 768px) {
+            #logo {
+                width: 10%;
+            }
+        }
+    </style>
+
+    <div class="content">
+        <a href="https://akmuz.fer.hr">
+            <img id="logo" src="{{ url_for('static', filename='images/logo.png') }}" />
+        </a>
+        <h1>AKMUZIFY</h1>
+        <h4>Add <a href="https://akmuz.fer.hr">AKMUZ</a> logo to your images with ease.</h4>
+        <form action="/api/create" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>Source code available on <a href="https://github.com/hermanzdosilovic/akmuzify">GitHub</a>.</p>
+    </div>
 </body>
 </html>
