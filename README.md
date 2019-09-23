@@ -3,5 +3,5 @@
 
 ## Run with Docker
 ```
-docker run -p 80:80 hermanzdosilovic/akmuzify:v1.0.0
+docker run -p 80:80 akmuzfer/akmuzify:v1.0.0
 ```
